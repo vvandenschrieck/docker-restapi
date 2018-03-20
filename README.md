@@ -3,14 +3,15 @@
 Based on the image greyltc/lamp, this image sets up a container running a simple REST API in PHP.  
 
 
-##REST API 
+## REST API 
+
 The REST API provides CRUD operations on a mysql database.  Resources are mapped into mysql tables.  This code is taken from https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/ 
 
 *Warning* : This REST API is for prototyping only! It uses plain HTTP and does not support authentication nor any security feature! 
 
-##Usage : 
+## Usage
 
-###Running the container
+### Running the container
 
 docker run -p80:80 --name restapi -d vvandenschrieck/restapi:latest
 
