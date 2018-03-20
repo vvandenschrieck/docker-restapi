@@ -5,8 +5,6 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 
 $raw_input = file_get_contents('php://input');
-var_dump($raw_input);
-fwrite(STDERR, $raw_input);
 $input = json_decode($raw_input,true);
  
 // connect to the mysql database
