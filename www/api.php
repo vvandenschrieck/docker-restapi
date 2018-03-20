@@ -1,6 +1,6 @@
-//This code is taken from https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/
-
 <?php
+
+//This code is taken from https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/
  
 // get the HTTP method, path and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
