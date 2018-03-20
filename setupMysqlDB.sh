@@ -13,5 +13,5 @@ function waitForMysql {
 
 waitForMysql
 mysql -u root -e "create database data;"
-mysql -u root -e "use data; create table HUMIDITY(value int, time timestamp);"
+mysql -u root -e "use data; create table HUMIDITY(humidity_value float, stream_value_time int);"
 
