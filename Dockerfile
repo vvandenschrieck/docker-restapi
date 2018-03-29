@@ -1,3 +1,5 @@
+#This image is also available at https://hub.docker.com/r/vvandenschrieck/restapi/
+#Test
 FROM greyltc/lamp
 
 MAINTAINER Virginie Van den Schrieck <v.vandenschrieck@ephec.be>
