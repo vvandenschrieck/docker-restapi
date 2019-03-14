@@ -10,7 +10,7 @@ ADD setupMysqlDB.sh /usr/sbin/setup-mysql-db
 #Adding api.php file to web server root folder
 ADD www /srv/http/
 
-#We don't use HTTP for simplicity - Don't do that in production!
+#We don't use HTTPS for simplicity - Don't do that in production!
 ENV APACHE_ENABLE_PORT_80 true
 
 EXPOSE 80
