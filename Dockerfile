@@ -13,9 +13,6 @@ ADD www /srv/http/
 #We don't use HTTPS for simplicity - Don't do that in production!
 ENV APACHE_ENABLE_PORT_80 true
 
-#Create apache user
-RUN useradd http
-
 EXPOSE 80
 
 CMD start-servers; setup-mysql-user; setup-mysql-db; sleep infinity
