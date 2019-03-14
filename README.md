@@ -19,7 +19,7 @@ docker run -p80:80 --name restapi -d vvandenschrieck/restapi:latest
 
 In the database provided in the image, a single table is available : HUMIDITY(humidity_value:float, stream_value_time:bigint).  
 
-To get all data recorded in this table (GET): navigate to http://<hostname>/api.php/HUMIDITY
+To get all data recorded in this table (GET): navigate to http://\<hostname\>/api.php/HUMIDITY
 To insert data using curl (POST) : curl -X POST -H "Content-Type:application/json" -d "{\"humidity_value\": \"40.82617\",\"stream_value_time\": \"1521578771526\"}" http://<hostname>/api.php/HUMIDITY/
 
 
