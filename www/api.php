@@ -8,7 +8,12 @@ $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 
 $raw_input = file_get_contents('php://input');
 $input = json_decode($raw_input,true);
+
 echo $input;
+echo $raw_input;
+error_log($raw_input, 0);
+error_log($input, 0);
+
  
 // connect to the mysql database
 $link = mysqli_connect('localhost', 'root', '', 'data');
@@ -69,4 +74,4 @@ if ($method == 'GET') {
 // close mysql connection
 mysqli_close($link);
 
-//Test : curl -X POST -H "Content-Type:application/json" -d "{\"value\": \"12\",\"time\": \"456\"}" https://localhost/post.php/HUMIDITY
+//Test : curl -X POST -H "Content-Type:application/json" -d "{\"value\": \"12\",\"time\": \"456\"}" http://localhost/api.php/HUMIDITY
