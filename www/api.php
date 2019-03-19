@@ -8,6 +8,7 @@ $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 
 $raw_input = file_get_contents('php://input');
 $input = json_decode($raw_input,true);
+echo $input;
  
 // connect to the mysql database
 $link = mysqli_connect('localhost', 'root', '', 'data');
@@ -49,7 +50,7 @@ $result = mysqli_query($link,$sql);
 // die if SQL statement failed
 if (!$result) {
   http_response_code(404);
-  die(mysqli_error());
+  die(mysqli_error($link));
 }
  
 // print results, insert id or affected row count
